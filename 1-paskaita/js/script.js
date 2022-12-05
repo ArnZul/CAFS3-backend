@@ -1,1 +1,1 @@
-alert("Working");
+alert("Java script has loaded...");
