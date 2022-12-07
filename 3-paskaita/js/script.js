@@ -65,7 +65,7 @@ console.log(arr2[1][0]);
 // Duoti du masyvai: 1, 2, 3 ir 4, 5, 6. Sujunkite juos.
 let first = [1, 2, 3];
 let second = [4, 5, 6];
-console.log(first + "," + second);
+console.log(first.concat(second));
 // Duotas masyvas 1, 2, 3. Iš jo padarykite masyvą 3, 2, 1.
 let firstReversed = first.reverse();
 console.log(firstReversed);
