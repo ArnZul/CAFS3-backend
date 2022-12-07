@@ -7,19 +7,8 @@ function plusPlusUsingFor(x, y) {
   return x;
 }
 // klases darbai // ciklai
-function plusPlusUsingWhile(x, y) {
-  let i = 0;
-  while (i < y) {
-    i++;
-    x = x + 1;
-  }
-  return x;
-}
-function plusPlusUsingDoWhile(x, y) {
-  let i = 0;
-  do {
-    i++;
-    x += 1;
-  } while (i < y);
+console.log(plusPlusWithoutLoop(10, 4));
+function plusPlusWithoutLoop(x, y) {
+  x = x + 1 * y;
   return x;
 }
