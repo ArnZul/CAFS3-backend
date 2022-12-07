@@ -53,8 +53,7 @@ let thirdTimesFourth = arr[2] * arr[3];
 console.log(firstTimesSecond);
 console.log(thirdTimesFourth);
 // 	Sudėkite rezultatus, priskirkite kintamąjam. Parodykite šio kintamojo reikšmę.
-let result = firstTimesSecond + thirdTimesFourth;
-console.log(result);
+console.log(firstTimesSecond + thirdTimesFourth);
 // Yra pateiktas masyvas [[1, 2, 3], [4, 5, 6], [7,8,9]]. Parodykite skaičių 4 iš šio masyvo.
 let arr2 = [
   [1, 2, 3],
