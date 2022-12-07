@@ -24,6 +24,14 @@ function plusPlusUsingDoWhile(x, y) {
   return x;
 }
 function plusPlusWithoutLoop(x, y) {
-  x = x + 1 * y;
+  x += 1 * y;
+  return x;
+}
+function plusPlusRecursion(x, y) {
+  if (y > 0) {
+    x++;
+
+    x = plusPlusRecursion(x, --y);
+  }
   return x;
 }
