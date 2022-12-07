@@ -40,7 +40,7 @@
 // Sukurkite masyvą a, b, c. Parodykite masyvą naudodami console.log funkciją.
 let a = [1, 2, 3, 4];
 // Naudodamiesi ankstesnės užduoties masyvu, parodykite pirmojo, antrojo ir trečiojo elementų turinį.
-console.log(a);
+console.log(a[0] + "," + a[1] + "," + a[2]);
 // 	Sukurkite masyvą a, b, c, d ir naudodami jį parodykite eilutė a + b, c + d.
 let b = [1, 2, 3, 4];
 console.log(b[0] + b[1]);
