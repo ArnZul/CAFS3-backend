@@ -86,11 +86,6 @@ function filterBySalePrice(array) {
   }
 }
 // 4. Patobulinkite objektų kūrimo kontsruktoriaus Products metododą aptartą 1.2. punkte, kad jis turėtų tokį funkcionalumą: patikrins ar produktas turi akciję kainą ir jeigu turi gražins tą nuolaidą kaip procentinę išraišką (pvz. produkto kaina 10 Eur, akcijinė kaina 7 Eur, gražins "Produktui "Nike pants" taikoma 30% nuuolada").
-// let prod1 = new Products("Maikutė", 15.99, NaN, "T-Shirts");
-// let prod2 = new Products("Batai", 10.99, 10.99, "Shoes");
-// let prod3 = new Products("Megztinis", 45.99, NaN, "Sweaters");
-// let prod4 = new Products("Džinsai", 10, 7, "Pants");
-// let prod5 = new Products("Treninginės kelnės", 18.99, 12.99, "Pants");
 function checkSalePriceWithDiscount(product) {
   const percent = ((product.price - product.salePrice) / product.price) * 100;
   if (isNaN(product.salePrice) === true || percent === 0) {
