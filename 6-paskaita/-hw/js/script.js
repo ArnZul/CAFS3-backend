@@ -94,3 +94,7 @@ function checkSalePriceWithDiscount(product) {
     console.log(`"${product.name}" taikoma ${percent}% nuolaida!`);
   }
 }
+
+// Nevadinti klasių daugiskaita.
+// Visada klases ir funkcijas iškelti į external filus ir importuoti i js arbar per index.html.
+// Funkcija visada turi grąžinti kažkokį return vietoj console.log().
