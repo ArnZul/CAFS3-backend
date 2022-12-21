@@ -24,5 +24,4 @@ http
   .listen(8082); // Server object listens on port 8081
 console.log("Node.js web server at port 8081 is running..");
 const cpu = os.cpus();
-console.log(cpu[0].model);
-console.log(cpu.length);
+console.log(`${cpu[0].model} ${cpu.length}`);
