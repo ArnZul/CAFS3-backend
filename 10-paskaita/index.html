@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FFT</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- container start -->
+    <div class="container">
+      <!-- task1 start -->
+      <div class="row mb-3">
+        <p>
+          Paspaudus mygtuką iškvieskite
+          <code>alert('Hello World!')</code>
+        </p>
+        <div class="text-center">
+          <button class="btn btn-primary" id="helloWorldButton">
+            Click on me
+          </button>
+        </div>
+        <!-- task1 end -->
+      </div>
+      <!-- task2 start -->
+      <div class="row mb-3">
+        <p>
+          Įvestai reikšmei priklausomai nuo paspausto mygtuko keičiame registrą
+          (Didelės/Mažos raidės)
+        </p>
+        <div class="d-flex">
+          <div class="col-4">
+            <input
+              type="text"
+              placeholder="Fill me in"
+              name=""
+              class="h-100 w-100 rounded-0 border-0"
+              id="task2Input"
+            />
+          </div>
+          <div class="btn-group col-8">
+            <button
+              class="btn btn-outline-secondary rounded-0"
+              id="upperCaseButton"
+              value="upperCase"
+            >
+              To Uppercase
+            </button>
+            <button
+              class="btn btn-outline-secondary rounded-0"
+              id="lowerCaseButton"
+              value="lowerCase"
+            >
+              To Lowercase
+            </button>
+            <button
+              class="btn btn-outline-secondary rounded-0"
+              id="capitalizeButton"
+              value="capitalizeFirst"
+            >
+              Capitalize
+            </button>
+            <button
+              class="btn btn-outline-secondary rounded-0"
+              id="decapitalizeButton"
+              value="lowercaseFirst"
+            >
+              Decapitalize
+            </button>
+          </div>
+        </div>
+        <!-- task2 end -->
+      </div>
+      <!-- task3 start -->
+      <div class="row mb-3">
+        <div>
+          <p>
+            Paspaudus mygtuką patikrinikite įvestas reikšmes ir jeigu reikia
+            prodykite klaidų pranešimus
+          </p>
+          <ul class="list-unstyled text-secondary">
+            <li>&bull; element show/hide</li>
+            <li>&bull; class add/remove</li>
+          </ul>
+        </div>
+        <form id="form">
+          <div class="mb-3 d-flex">
+            <label for="exampleInputEmail1" class="form-label col-2"
+              >Email</label
+            >
+            <input
+              class="form-control"
+              id="emailInput"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div>
+            <p class="text-danger" id="emailError">
+              Please provide a valid email address.
+            </p>
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="PhoneInput" class="form-label col-2">Phone No.</label>
+            <input type="tel" class="form-control" id="phoneInput" />
+          </div>
+          <div>
+            <p class="text-danger" id="phoneError">
+              Please provide a valid phone number.
+            </p>
+          </div>
+          <div class="d-flex">
+            <div class="col-2"></div>
+            <div class="d-flex">
+              <button class="btn btn-outline-secondary" id="ValidateFormButton">
+                Save
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- task3 end -->
+      <!-- task4 start -->
+      <div class="row mb-3">
+        <p>Paspaudus mygtuką užblokuokite/atblokuokite <code>input</code></p>
+        <div class="input-group">
+          <button class="btn btn-outline-danger" id="blockButton">Block</button>
+          <div class="col">
+            <input
+              type="text"
+              placeholder="I'm input! You can try to enter something..."
+              name=""
+              class="w-100 h-100"
+              id="blockUnblockInput"
+            />
+          </div>
+          <button class="btn btn-outline-success" id="unblockButton">
+            Unblock
+          </button>
+        </div>
+      </div>
+      <!-- task4 end -->
+      <!-- task5 start -->
+      <div class="row mb-3">
+        <p>Užvedus ant paveiksliuko pakeiskite jį</p>
+        <ul class="list-unstyled">
+          <li>
+            &bull;
+            <a href="https://imgur.com/PLDVxza.jpg"
+              >https://imgur.com/PLDVxza.jpg</a
+            >
+          </li>
+          <li>
+            &bull;
+            <a href="https://imgur.com/0DElr0H.jpg"
+              >https://imgur.com/0DElr0H.jpg</a
+            >
+          </li>
+        </ul>
+        <div class="text-center">
+          <img src="https://imgur.com/0DElr0H.jpg" alt="monke" id="hoverImg" />
+          <!-- <img src="https://via.placeholder.com/300.png/09f/fff" alt="" /> -->
+        </div>
+      </div>
+      <!-- task5 end -->
+      <!-- task6 start -->
+      <div class="row mb-3">
+        <p>
+          Paspaudus ant mygtuko turi "iškristi" meniu su punktais. Paspaudus
+          punktą turi įvykti veiksmas
+        </p>
+        <figure class="text-end">
+          <blockquote class="blockquote">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              posuere erat a ante.
+            </p>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            Someone famous in <cite title="Source Title">Source Title</cite>
+          </figcaption>
+        </figure>
+        <div class="btn-group">
+          <div class="dropdown ms-2">
+            <button
+              class="btn btn-danger dropdown-toggle"
+              type="button"
+              id="dropdownMenu2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Cursors
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li>
+                <button class="dropdown-item" type="button">Pointer</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">Text</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">Copy</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">Foo</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">Help</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">Crosshair</button>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown ms-2">
+            <button
+              class="btn btn-danger dropdown-toggle"
+              type="button"
+              id="dropdownMenu2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Colors
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li data-color="Red">
+                <button class="dropdown-item" type="button">
+                  <span class="text-danger">Red</span>
+                </button>
+              </li>
+              <li data-color="Green">
+                <button class="dropdown-item" type="button">
+                  <span class="text-success">Green</span>
+                </button>
+              </li>
+              <li data-color="blue">
+                <button class="dropdown-item" type="button">
+                  <span class="text-primary">Blue</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown ms-2">
+            <button
+              class="btn btn-danger dropdown-toggle"
+              type="button"
+              id="dropdownMenu2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Borders
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li data-color="Red">
+                <button class="dropdown-item" type="button">
+                  <span class="text-danger">Red</span>
+                </button>
+              </li>
+              <li data-color="Green">
+                <button class="dropdown-item" type="button">
+                  <span class="text-success">Green</span>
+                </button>
+              </li>
+              <li data-color="Blue">
+                <button class="dropdown-item" type="button">
+                  <span class="text-primary">Blue</span>
+                </button>
+              </li>
+            </ul>
+            <button class="btn btn-success ms-1" id="resetButton">
+              Reset all
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- task6 end -->
+      <!-- task 7 start -->
+      <div class="row mb-3">
+        <p>
+          Paspaudus mygtuką parodykite informacija apie save modaliniame lange
+        </p>
+        <div class="text-center">
+          <button
+            class="btn btn-primary"
+            id="promptModal"
+            data-bs-toggle="modal"
+            data-bs-target="#modal"
+          >
+            Launch modal
+          </button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="modal" role="dialog">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">Lorem, Ipsum</div>
+              <div class="modal-body">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Possimus asperiores corporis sint expedita. Aut doloribus
+                  laborum similique! Ullam nam quaerat commodi laboriosam, qui
+                  adipisci! Fugiat esse vitae laudantium necessitatibus
+                  praesentium?
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Container end-->
+    <script src="./js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
