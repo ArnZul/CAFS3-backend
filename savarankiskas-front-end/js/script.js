@@ -41,11 +41,11 @@ function validateEmail(email) {
 }
 
 function validatePhoneNumber(phoneNumber) {
-  var re = /^\+\d{1,3}\d{9,15}$/;
-  return re.test(phoneNumber);
+  const numberFormat = /^\+\d{1,3}\d{9,15}$/;
+  return numberFormat.test(phoneNumber);
 }
 // const ValidateButton = document.getElementById("ValidateFormButton");
-var form = document.getElementById("form");
+const form = document.getElementById("form");
 
 // Add an event listener to the form's submit event
 form.addEventListener("submit", function (event) {
@@ -53,8 +53,8 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   // Get the email and phone number values from the input fields
-  var email = document.getElementById("emailInput").value;
-  var phoneNumber = document.getElementById("phoneInput").value;
+  const email = document.getElementById("emailInput").value;
+  const phoneNumber = document.getElementById("phoneInput").value;
 
   // Validate the email and phone number
   if (!validateEmail(email)) {
