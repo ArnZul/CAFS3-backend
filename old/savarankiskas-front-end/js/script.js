@@ -193,3 +193,33 @@ window.addEventListener("load", function () {
   document.getElementById("emailError").style.display = "none";
   document.getElementById("phoneError").style.display = "none";
 });
+
+// let x = [];
+// console.log(x + 1 + 2);
+// let a = 1;
+// let b = {
+//   toString() {
+//     return "1";
+//   },
+// };
+// let c = 1;
+// console.log(10 / 0); infinity
+// console.log(10 * "abcd");
+// let arr = [];
+// arr[1] = 1;
+// arr[3] = 33;
+// console.log(arr.length);
+// function f() {}
+// console.log(f instanceof Function);
+// for (let index = 0; index < 10; index++) {
+//   setTimeout(function () {
+//     console.log(index);
+//   }, 1000);
+// }
+// let obj = {
+//   "0": 1,
+//   0: 2,
+// };
+// console.log(obj["0"] + obj[0]);
+// function user() {}
+// user.prototype = {admin: false};
